@@ -1,0 +1,38 @@
+
+
+$result_1 = mysql_query("SELECT * FROM empresas;");
+while($row_1 = mysql_fetch_array($result_1)) {
+
+$result_2 = mysql_query("SELECT * FROM sucursales WHERE id_empresas = '$row_1[0]';");
+$row_2 = mysql_fetch_array($result_2);
+
+
+//here res.send(data from first query + data from second query)
+
+}
+
+
+$result_1 = mysql_query("SELECT * FROM empresas;");
+while($row_1 = mysql_fetch_array($result_1)) {
+
+$result_2 = mysql_query("SELECT sum(dotacion) FROM sucursales WHERE id_empresas = '$row_1[0]';");
+$row_2 = mysql_fetch_array($result_2);
+
+
+//here res.send(data from first query + data from second query)
+
+}
+
+
+
+
+$result_1 = mysql_query("SELECT * FROM empresas;");
+while($row_1 = mysql_fetch_array($result_1)) {
+
+$result_2 = mysql_query("SELECT count(*) FROM sucursales WHERE id_empresas = '$row_1[0]';");
+$row_2 = mysql_fetch_array($result_2);
+
+
+//here res.send(data from first query + data from second query)
+
+}
